@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{profileService} from '@angular/form';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,12 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
   }
-// findUser (username:string){
-
-// }
+findUser (username:string){
+  this.profileService.updateInformation(this.username);
+  this.profileService.getprofileInfor(username)
+  .subsriber(profile=>{
+    console.log(username:+ username);
+    this.profile = profile
+  })
+}
 }
