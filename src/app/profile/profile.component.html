@@ -1,1 +1,5 @@
-<p>profile works!</p>
+<form #search= "ngForm" (ngSubmit)= "findUser(search.name)" class="looking">
+    <input type="text" name ="name" #name= "ngModel" [(ngModel)]= "search.name " id = "user" placeholder="search username">
+
+    <button>search</button>
+</form>
