@@ -7,19 +7,19 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
-// @NgModule({
-//  declarations: [
-//    AppComponent,
-//    ProfileComponent,
-//  ],
+@NgModule({
+ declarations: [
+   AppComponent,
+   ProfileComponent,
+ ],
  
-//  imports: [
-//    BrowserModule,
-//    HttpClientModule,
-//    FormsModule,
-//    ReactiveFormsModule
-//  ],
-//  providers: [ProfileService],
-//  bootstrap: [AppComponent]
-// })
+ imports: [
+   BrowserModule,
+   HttpClientModule,
+   FormsModule,
+   ReactiveFormsModule
+ ],
+ providers: [ProfileService],
+ bootstrap: [AppComponent]
+})
 export class AppModule { }
