@@ -1,13 +1,12 @@
-<div class="descriprion">
-  <h6>This is an application that one searches for github users using username</h6>
-
-<div class="justify-content-center">
-  <form #search='ngForm' (ngSubmit)="findUser(search.name)" class="suchfor">
-    <h1> GITHUB SEARCH </h1>
+<div class="row" id="code">
+  <div class="col-sm">
+  <form #search='ngForm' (ngSubmit)="findUser(search.name)" class="tuma">
+    <!-- <h1> GITHUB SEARCH </h1> -->
     <input type="text" name="name" #name='ngModel' [(ngModel)]='search.name' id="user" placeholder="Enter GithubName">
     <button>Search</button>
   </form>
-  
+</div>
+  <div class="col-sm">
   <div *ngIf="profile" class="side">
     <div class="image">
       <img class="rounded-circle z-depth-8" src="{{ profile.avatar_url}}" alt="profileimg"
@@ -38,3 +37,5 @@
   </div>
 </div>
 </div>
+</div>
+
