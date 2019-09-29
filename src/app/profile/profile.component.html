@@ -4,7 +4,7 @@
    <input type="text" name="name" #name='ngModel' [(ngModel)]='search.name' id="user" placeholder="Enter GithubName">
    <button>Search</button>
    </form>
-   <!-- <strong *ngIf="profile" class="side">
+   <strong *ngIf="profile" class="side">
     <div class="image">
       <img class="rounded-circle z-depth-8" src="{{ profile.avatar_url}}" alt="profileimg"
         data-holder-rendered="true"><br>
@@ -18,7 +18,7 @@
       <li class="following"><strong>following:</strong>{{profile.following}}</li>
       <li class="prepos"><strong>public_repos:</strong> {{profile.public_repos}}</li>
     </ul>
-  </div> -->
+  </div>
   <div *ngFor="let repos of repos" class="two-in-arow">
     <div class="card card-cascade wider reverse width50">
       <!-- Card content -->
