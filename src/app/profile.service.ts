@@ -13,15 +13,15 @@ export class ProfileService {
    this.username = 'tumaa';
  }
 
-//  getprofileInfo(username) {
-//    return this.tuma.get('https://api.github.com/users/' + username + '?access_token=' + this.inform);
-//  }
+ getprofileInfo(username) {
+   return this.tuma.get('https://api.github.com/users/' + username + '?access_token=' + this.inform);
+ }
 
-//  getprofileRepos(username) {
-//    return this.tuma.get('https://api.github.com/users/' + username + '/repos' + '?access_token=' + this.inform);
-//  }
+ getprofileRepos(username) {
+   return this.tuma.get('https://api.github.com/users/' + username + '/repos' + '?access_token=' + this.inform);
+ }
  
-//  updateInformation(username: string) {
-//    this.username = username;
-//  }
-// }
+ updateInformation(username: string) {
+   this.username = username;
+ }
+}
