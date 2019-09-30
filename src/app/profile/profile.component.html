@@ -1,41 +1,37 @@
-<div class="row" id="code">
-  <div class="col-sm">
-  <form #search='ngForm' (ngSubmit)="findUser(search.name)" class="tuma">
-    <!-- <h1> GITHUB SEARCH </h1> -->
-    <input type="text" name="name" #name='ngModel' [(ngModel)]='search.name' id="user" placeholder="Enter GithubName">
-    <button>Search</button>
-  </form>
-</div>
-  <div class="col-sm">
-  <div *ngIf="profile" class="side">
-    <div class="image">
-      <img class="rounded-circle z-depth-8" src="{{ profile.avatar_url}}" alt="profileimg"
-        data-holder-rendered="true"><br>
-      <a href="{{profile.html_url}}" target="_blank"><b>VIEW PROFILE</b></a>
-    </div>
-    <ul>
-      <li class="Username"><strong>Name:</strong>{{profile.name}}</li>
-      <li class="name"><strong>Username:</strong>{{profile.login}}</li>
-      <li *ngIf="profile.bio"><strong>Bio:</strong> {{profile.bio}}</li>
-      <li class="followers"><strong>Followers:</strong>{{profile.followers}}</li>
-      <li class="following"><strong>following:</strong>{{profile.following}}</li>
-      <li class="prepos"><strong>public_repos:</strong> {{profile.public_repos}}</li>
-    </ul>
+<div class="container-fluid">
+  <div class="former">
+      <div id="code">
+        <div id="form column">
+          <form #search='ngForm' (ngSubmit)="findUser(search.name)" class="tuma">
+            <input type="text" name="name" #name='ngModel' [(ngModel)]='search.name' id="user"
+              placeholder="Enter GithubName">
+            <button class="button">Search</button>
+          </form>
+        </div>
 
-</div>
-<div *ngFor="let repos of repos" class="two-in-arow">
-  <div class="card card-cascade wider reverse width50">
-    <!-- Card content -->
-    <div class="card-body card-body-cascade text-center">
-      <!-- Title -->
-      <h4 class="card-title"><strong>{{repos.name}}</strong></h4>
-      <!-- Subtitle -->
-      <h6 class="font-weight-bold indigo-text py-2">Photography</h6>
-      <!-- Text -->
+      </div>
+    </div>
+      <div *ngIf="profile" class="side column">
+        <div class="image">
+          <img class="rounded-circle z-depth-10" src="{{ profile.avatar_url}}" alt="profileimg"
+            data-holder-rendered="true"><br>
+          <a href="{{profile.html_url}}" target="_blank"><b>VIEW PROFILE</b></a>
+        </div>
+        <ul>
+          <li class="Username"><strong>Name:</strong>{{profile.name}}</li>
+          <li class="name"><strong>Username:</strong>{{profile.login}}</li>
+          <li *ngIf="profile.bio"><strong>Bio:</strong> {{profile.bio}}</li>
+          <li class="followers"><strong>Followers:</strong>{{profile.followers}}</li>
+          <li class="following"><strong>following:</strong>{{profile.following}}</li>
+          <li class="prepos"><strong>public_repos:</strong> {{profile.public_repos}}</li>
+        </ul>
+      </div>
+  <div class="row">
+    <div *ngFor="let repos of repos" class="col-4 card" id="space">
+      <h4 class="card-title"><small style='text-align: center'>
+          :{{repos.name}}</small></h4>
       <p class="card-text">{{repos.description}}<a href="{{repos.html_url}}" target="_blank"><br> VIEW</a></p>
+
     </div>
   </div>
 </div>
-</div>
-</div>
-

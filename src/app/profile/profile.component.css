@@ -1,9 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
 #code{
 font-family: 'Courgette', cursive;
-background-image: url('https://images.pexels.com/photos/2826351/pexels-photo-2826351.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height: 100%;
+background-attachment: fixed;
 }
+.rounded-circle{
+    width: 150px;
+    height: 150px;
+}
+.row{}
+.former{
+    text-align: center;
+    margin-top: 30%;
+}
+#space{
+justify-content: space-between;
+width: 33.33%;
+
+}
+ul {
+    list-style-type: none;
+   }
+#form{
+    
+    margin-left: 2%;
+    text-align: center;
+}
+.button {
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+  }
+  #user{
+    border-radius: 15px;
+  }
+  input, textarea {
+    background-color :  #3e8e41;
+  }
+  ::-webkit-input-placeholder {
+    color:black;
+  }
+  
+  :-ms-input-placeholder {
+    color :black;
+  }
+  
+  ::placeholder {
+    color:black;
+  }
+  

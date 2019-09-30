@@ -1,0 +1,7 @@
+.jumbotron{
+    background-image: url('https://images.pexels.com/photos/2092453/pexels-photo-2092453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 97vh;
+}
