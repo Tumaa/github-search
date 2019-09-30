@@ -1,27 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileService } from 'src/app/profile.service';
+import { FormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
+import{ ServiceRequestService } from './service-http/service-request.service'
+import { RouterModule,Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
 import { DateCountPipe } from './date-count.pipe';
+import { GithubDetailsComponent } from './github-details/github-details.component';
 
+const routes:Routes =[
+  {path:'',redirectTo:'/search-details',pathMatch:'full'}
+];
 
 @NgModule({
- declarations: [
-   AppComponent,
-   ProfileComponent,
-   DateCountPipe,
- ],
- 
- imports: [
-   BrowserModule,
-   HttpClientModule,
-   FormsModule,
-   ReactiveFormsModule
- ],
- providers: [ProfileService],
- bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    DateCountPipe,
+    GithubDetailsComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(routes)
+  ],
+  providers: [ServiceRequestService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
