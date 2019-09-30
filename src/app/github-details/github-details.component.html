@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="search-class">
-                <p id='users' style='margin-right: 25px;' class ="btn btn-warning" (click)="searchUsers = true">Users</p>
+                <p id='users' style='margin-right: 25px;' class="btn btn-warning" (click)="searchUsers = true">Users</p>
                 <p id='repos' class="btn btn-info" (click)="searchUsers = false">Repos</p>
             </div>
             <p class="moringa"></p>
@@ -16,7 +16,8 @@
 
             <div *ngIf="searchUsers" class="d-flex justify-content-sm-between clearfix main-card">
                 <div class="avi-panel to-left">
-                    <img src="{{user.avatar_url}}" alt="avatar"style='width:250px; height:250px;' class="rounded-circle z-depth-8" id="avatar">
+                    <img src="{{user.avatar_url}}" alt="avatar" style='width:250px; height:250px;'
+                        class="rounded-circle z-depth-8" id="avatar">
                     <br>
                     <p id='users' class="btn btn-warning" (click)="searchUsers = true"> <a href="{{user.html_url}}"
                             target="_blank"><button class=" prof-btn">Go to Profile </button></a>
