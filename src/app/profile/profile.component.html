@@ -1,43 +1,33 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm">
+  <h5>Welcome to github-search.The center where you will be able to see your github details on searching your username.</h5>
       <div id="code">
-        <div id="form column">
+        <div id="form">
           <form #search='ngForm' (ngSubmit)="findUser(search.name)" class="tuma">
             <input type="text" name="name" #name='ngModel' [(ngModel)]='search.name' id="user"
               placeholder="Enter GithubName">
             <button class="button">Search</button>
           </form>
         </div>
-
-      </div>
     </div>
+    <div class="row">
     <div class="col-sm">
       <div *ngIf="profile" class="side column">
         <div class="image">
           <img class="rounded-circle z-depth-10" src="{{ profile.avatar_url}}" alt="profileimg"
             data-holder-rendered="true"><br>
-          <a href="{{profile.html_url}}" target="_blank"><b>VIEW PROFILE</b></a>
+            <button type="button" class="btn btn-danger px-3"><a href="{{profile.html_url}}" target="_blank"><b>VIEW PROFILE</b></a><i class="fas fa-users" aria-hidden="true"></i></button>
+
+      
+
         </div>
-        <ul>
-          <li class="Username"><strong>Name:</strong>{{profile.name}}</li>
-          <li class="name"><strong>Username:</strong>{{profile.login}}</li>
-          <li *ngIf="profile.bio"><strong>Bio:</strong> {{profile.bio}}</li>
-          <li class="followers"><strong>Followers:</strong>{{profile.followers}}</li>
-          <li class="following"><strong>following:</strong>{{profile.following}}</li>
-          <li class="prepos"><strong>public_repos:</strong> {{profile.public_repos}}</li>
-        </ul>
       </div>
     </div>
-  </div>
-  <hr>
-
-  <div class="row">
-    <div *ngFor="let repos of repos" class="col-4 card">
-      <h4 class="card-title"><small style='text-align: center'>
-          :{{repos.name}}</small></h4>
-      <p class="card-text">{{repos.description}}<a href="{{repos.html_url}}" target="_blank"><br> VIEW</a></p>
-
+      <div class="col-sm">
+        <ul>
+          <li class="followers" style="text-align: center"><strong>Followers </strong> <br>{{profile.followers}}</li>
+          <li class="following" style="text-align: center"><strong>Following </strong> <br>{{profile.following}}</li>
+          <li class="prepos" style="text-align: center"><strong> Repos</strong> <br>{{profile.public_repos}}</li>
+        </ul>
     </div>
   </div>
-    </div>
+  </div>

@@ -7,10 +7,8 @@ background-attachment: fixed;
     width: 150px;
     height: 150px;
 }
-.row{}
-.former{
-    text-align: center;
-    margin-top: 30%;
+#form{
+    margin-top: 10%;
 }
 #space{
 justify-content: space-between;
@@ -42,10 +40,11 @@ ul {
   }
   #user{
     border-radius: 15px;
+    width: 75%;
   }
-  input, textarea {
+  /* input, textarea {
     background-color :  #3e8e41;
-  }
+  } */
   ::-webkit-input-placeholder {
     color:black;
   }
@@ -57,4 +56,13 @@ ul {
   ::placeholder {
     color:black;
   }
-  
+  ul>li{
+      border: 2px solid green;
+      width: 100px;
+      height: 50px;
+  }
+  ul
+{
+  display:flex;  
+  list-style:none;
+}
