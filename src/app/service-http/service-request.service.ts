@@ -20,7 +20,6 @@ export class ServiceRequestService {
     this.userName = 'tumaa';
    }
 
-
    getUser() {
     interface ApiResponse {
       login: string;
