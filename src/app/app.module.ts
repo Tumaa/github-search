@@ -5,12 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileService } from 'src/app/profile.service';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
  declarations: [
    AppComponent,
    ProfileComponent,
+   DateCountPipe,
  ],
  
  imports: [
