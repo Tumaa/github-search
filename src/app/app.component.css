@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ranga&display=swap');
+
 .jumbotron{
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWdNpYd7IfnRnWbIBgjdUaLfQCiLct1SB8mEwflyZku7jO7NAKMw');
     background-size: cover;
@@ -6,4 +8,6 @@
     background-repeat: no-repeat;
     height:97vh;
     width:100%;
+    font-family: 'Ranga', cursive;
+    text-align: center;
 }
