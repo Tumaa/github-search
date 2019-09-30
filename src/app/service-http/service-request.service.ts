@@ -12,6 +12,7 @@ export class ServiceRequestService {
   private userName:string;
 
   apiKey:string = environment.apiKey;
+  baseUrl:string = environment.baseUrl;
 
   constructor(private http:HttpClient) {
     this.user = new User ('', '', '', '', 0, 0, 0);
