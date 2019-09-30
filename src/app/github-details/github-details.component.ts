@@ -13,7 +13,6 @@ export class GithubDetailsComponent implements OnInit {
 
  
   searchUsers = true;
-
   user: User;
   repo: Repo;
   username: string;
@@ -37,9 +36,6 @@ export class GithubDetailsComponent implements OnInit {
   ngOnInit() {
     this.service.getUser();
     this.user = this.service.user;
-
-    this.service.getRepos(this.username);
-    this.repo = this.service.repo;
 }
 }
 

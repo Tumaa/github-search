@@ -20,8 +20,8 @@ export class ServiceRequestService {
     this.userName = 'tumaa';
    }
 
-   getUser() {
 
+   getUser() {
     interface ApiResponse {
       login: string;
       avatar_url: string;
@@ -52,24 +52,12 @@ export class ServiceRequestService {
   }
 
   getRepos(username:any) {
-
     interface ApiResponse {
       name: string;
       html_url: string;
       description: string;
     }
-
-    const promise = new Promise(((resolve, reject) => {
-      this.http.get<ApiResponse>('https://api.github.com/users/' + this.userName + '/repos?access_token=' + this.apiKey )
-        .toPromise()
-        .then(res => {
-          this.repo = res;
-    }, error => {
-
-      reject(error);
-    });
-  }));
-    return promise;
+    return Promise;
   }
   getUsername(username:string){
     this.userName = username;
